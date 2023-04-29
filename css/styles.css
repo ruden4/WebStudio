@@ -168,7 +168,7 @@ body {
 
 .js-open-menu{}
 /* *************************************************************** */
-/*HEADER____________________________________________*/
+/*HEADER**********************************************************************************************************************************/
 .page-header {
   padding: 23px 0;
   border-bottom: 1px solid var(--border-color);
@@ -306,32 +306,82 @@ body {
 .list-connection:focus {
   color: var(--button-color);
 }
-/*HERO______________________________________________*/
+/*HERO*************************************************************************************************************************************/
 .section-hero {
-  max-width: 1440px;
   background-color: var(--second-color);
-  background-image: var(--background-gradient), url(../images/people-office.jpg);
+  padding-top: 112px;
+  padding-bottom: 112px;
+  background-image: var(--background-gradient), url(../images/hero/1xHeroMob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: 0 auto;
-  padding-top: 188px;
-  padding-bottom: 188px;
 }
-/* .hero-container {
-} */
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: var(--background-gradient), url(../images/hero/2xHeroMob.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .section-hero {
+    padding-top: 112px;
+    padding-bottom: 112px;
+    background-image: var(--background-gradient), url(../images/hero/1xHeroTab.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: var(--background-gradient), url(../images/hero/2xHeroTab.jpg);
+  }
+}
+  }
+@media screen and (min-width: 1158px) {
+  .section-hero {
+    background-image: var(--background-gradient), url(../images/hero/1xHeroDesk.jpg);
+    padding-top: 188px;
+    padding-bottom: 188px;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: var(--background-gradient), url(../images/hero/2xHeroDesk.jpg);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+}
+.section-hero .container {
+  max-width: 320px;
+}
+@media screen and (min-width: 768px) {
+  .section-hero .container {
+    max-width: 528px;
+  }
+}
+
 .hero-title {
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 32px;
+  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--background-color);
-  width: 496px;
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
+}
+@media screen and (min-width: 768px){
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    text-align: center;
+    margin-bottom: 36px;
+  }  
+}
+@media screen and (min-width: 1158px) {
+  .hero-title {
+    margin-bottom: 48px;
+  }
 }
 .hero-button {
   font-family: 'Roboto', sans-serif;
@@ -354,26 +404,28 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) {
+  .hero-button {
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--button-color);
 }
-/*INFO_______________________________________________*/
-/* .section-info {
-} */
+}
+/*INFO*************************************************************************************************************************************/
 .section-info {
   padding-top: 120px;
   padding-bottom: 120px;
 }
-/* .info-title {
-} */
 
 .info-list {
   display: flex;
   gap: 24px;
 }
-/* .info-item {
-} */
+
 .info-image {
   display: flex;
   width: 264px;
@@ -401,7 +453,7 @@ body {
   letter-spacing: 0.02em;
   width: 264px;
 }
-/*SERVICE____________________________________________*/
+/*SERVICE**********************************************************************************************************************************/
 .section-service {
   padding-bottom: 120px;
 }
