@@ -259,10 +259,6 @@ body {
   position: absolute;
   top: 24px;
   right: 24px;
-
-  transition-property: fill, background-color, border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .burger-close-btn:hover,
 .burger-close-btn:focus {
@@ -293,7 +289,9 @@ gap: 40px;
 .current-burger {
   color: var(--button-color);
 }
-
+.burger-address-list {
+  margin-bottom: 48px;
+}
 .burger-mail-link {
   font-style: normal;
   font-weight: 500;
@@ -301,9 +299,6 @@ gap: 40px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--brand-color);
-  
-  display: block;
-  margin-bottom: 48px;
 }
 .burger-tel-link {
   font-style: normal;
@@ -588,6 +583,11 @@ letter-spacing: 0.02em;
   padding-top: 96px;
   padding-bottom: 96px;
 }
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+.section-team .container {
+  width: 584px;
+}
+}
 @media screen and (min-width: 1158px) {
   .section-team {
   padding-top: 120px;
@@ -679,11 +679,17 @@ letter-spacing: 0.02em;
 } 
 }
 /*CUSTOMERS*****************************************************************************/
+
 .section-customers {
   padding-top: 96px;
   padding-bottom: 96px;
 }
-@media screen and (min-width: 768px) and (max-width:1157) {
+@media screen and (max-width: 767px) {
+  .section-customers .container {
+    max-width: 428px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width:1157px) {
 .section-customers .container {
   width: 528px;
 }
@@ -796,7 +802,7 @@ margin-left: auto;
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 48px 24px;
+  gap: 48px 23px;
 }
 .items-link {
   display: block;
@@ -1216,6 +1222,7 @@ letter-spacing: 0.04em;
 }
 .form-policy {
   margin-bottom: 24px;
+  display: flex;
 }
 .form-policy-label {
   font-size: 12px;
@@ -1223,6 +1230,7 @@ letter-spacing: 0.04em;
   letter-spacing: 0.04em;
   color: var(--modal-color-text);
   display:flex;
+  
 }
 .form-policy-label span {
   width: 16px;
@@ -1234,6 +1242,7 @@ letter-spacing: 0.04em;
   align-items: center;
   justify-content: center;
   fill: transparent;
+  flex-shrink: 0;
 }
 .form-policy-check:checked + .form-policy-label span {
   background-color: var(--button-color);
