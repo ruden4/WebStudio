@@ -973,6 +973,11 @@ align-items: start;
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+.form-footer-container {
+  align-items: start;
+}
+}
 .form-footer-title {
   font-weight: 500;
   font-size: 16px;
